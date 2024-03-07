@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Display</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="temperature-container">
+        <h1 class="temperature-text">Current Temperature: <%= current[0] %> °C</h1>
+        <p class="small-text">Current Rain: <%= current[1] %> mm</p>
+        <p class="small-text">Current Showers: <%= current[2] %> mm</p>
+        <p class="small-text">Current Snowfall: <%= current[3] %> cm</p>
+        <p class="small-text">Current Vapour Pressure deficit: <%= current[4] %> kPa</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Temperature (°C)</th>
+                    <th>Rain (mm)</th>
+                    <th>Showers (mm)</th>
+                    <th>Snowfall (cm)</th>
+                    <th>Pressure (kPa)</th>
+                </tr>
+                <tbody>
+                    <% for (var i = timeIndex; i < (timeIndex + 23); i++) { %>
+                        <tr>
+                            <td><%= times[i] %></td>
+                            <td><%= temperatures[i] %></td>
+                            <td><%= rains[i] %></td>
+                            <td><%= showers[i] %></td>
+                            <td><%= snowfalls[i] %></td>
+                            <td><%= pressures[i] %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </thead>
+        </table>
+
+    </div>
+
+</body>
+</html>

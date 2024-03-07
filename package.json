@@ -1,0 +1,24 @@
+{
+  "name": "weather_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "minify:css": "cleancss -o public/style.min.css public/style.css",
+    "minify:js": "uglifyjs -o /index.min.js /index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "maxmind": "^4.3.18",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "uglify-js": "^3.17.4"
+  }
+}
